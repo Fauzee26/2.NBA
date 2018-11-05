@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/imgDetail"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/txtDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgDetail"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="21sp"
+            app:fontFamily="@font/luckiest_guy"
+            tools:text="Cavaliers" />
+
+        <TextView
+            android:id="@+id/txtYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDetail"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:text="1944" />
+
+        <TextView
+            android:id="@+id/txStadium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtYear"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:text="Time Warner Cable Arena" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrolll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rell"
+        android:layout_below="@id/relativ">
+
+        <TextView
+            android:id="@+id/txtDeskripsi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:padding="6dp"
+            app:fontFamily="@font/secular_one"
+            tools:text="The Dallas Mavericks (often referred to as the Mavs) are a professional basketball team based in Dallas, Texas.
+         They are members of the Southwest Division of the Western Conference of the National Basketball Association (NBA). According to a 2013 Forbes Magazine report, they are the fifth-most valuable basketball franchise in the United States, valued at approximately $685 million; the franchise is surpassed in value only by the New York Knicks, the Los Angeles Lakers, the Chicago Bulls and the Boston Celtics. As of the 2013 season, the Mavericks have sold out 477 consecutive games since December 15, 2001, the longest currently running sellout streak in North American major league sports. Since their inaugural 1980–81 season, the Mavericks have won three division titles (1987, 2007, 2010), two conference championships (2006, 2011), and one NBA Championship (2011)." />
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/imgWeb"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="12dp"
+            android:layout_toLeftOf="@id/imgFacebook"
+            android:background="@drawable/circle"
+            android:padding="10dp"
+            android:src="@drawable/web" />
+
+        <ImageView
+            android:id="@+id/imgFacebook"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_toStartOf="@id/vw"
+            android:layout_toLeftOf="@id/vw"
+            android:background="@drawable/circle"
+            android:src="@drawable/fb" />
+
+        <View
+            android:id="@+id/vw"
+            android:layout_width="2dp"
+            android:layout_height="2dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp" />
+
+        <ImageView
+            android:id="@+id/imgTwitter"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_toEndOf="@id/vw"
+            android:layout_toRightOf="@id/vw"
+            android:background="@drawable/circle"
+            android:src="@drawable/twitter" />
+
+        <ImageView
+            android:id="@+id/imgInstagram"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/imgTwitter"
+            android:background="@drawable/circle"
+            android:src="@drawable/ig" />
+    </RelativeLayout>
+</RelativeLayout>
